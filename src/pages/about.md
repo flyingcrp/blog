@@ -1,36 +1,49 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "About"
+description: "About me"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
-
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
-
+<!--suppress HtmlUnknownTarget -->
 <div>
-  <img src="/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <!--suppress HtmlUnknownTarget -->
+    <img src="/assets/avatar.jpeg" class="mx-auto w-48 h-48 rounded-full object-cover" alt="coding dev illustration">
 </div>
+<p class="text-center">
+    Hi, I'm flyingcrp(Chen Shiyi), born in 1991
+</p>
+<p class="text-center">
+    <span id="my_date"></span>
+</p>
+<p class="text-center">
+    <span id="year"></span>
+</p>
 
-## Tech Stack
+## Journey
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+<p class="font-bold italic">Career trajectory</p>
 
-## Features
+- 07/2022 ~ present (CTO)
+- 05/2018 ~ 05/2022 (CO-Founder & CTO)
+- 09/2015 ~ 03/2018 (Full Stack)
+- 10/2014 ~ 08/2015 (Frontend)
+- 09/2011 ~ 07/2014 (Backend)
 
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+<script>
+function getAge() {
+    const specifiedDate = new Date("2011-09-01");
+        const currentDate = new Date();
+        let yearDiff = currentDate.getFullYear() - specifiedDate.getFullYear();
+        let month = currentDate.getMonth();let monthDiff = month - specifiedDate.getMonth();
+        if (monthDiff < 0) {
+            yearDiff--;
+            monthDiff += 12;
+        }
+        const currentDateElement = document.getElementById("year");
+        currentDateElement.innerText = `${yearDiff} years and ${monthDiff} months of work experience`;
+        const myDate=document.getElementById("my_date");
+        month=month+1;
+        myDate.innerText=`09/2011 ~ ${month>9?month:`0${month}`}/${currentDate.getFullYear()}`;
+    }
+    getAge()
+</script>
