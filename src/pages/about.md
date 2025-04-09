@@ -25,9 +25,9 @@ description: "About me"
 
 - 07/2022 ~ present (CTO)
 - 05/2018 ~ 05/2022 (CO-Founder & CTO)
-- 09/2015 ~ 03/2018 (Full Stack)
-- 10/2014 ~ 08/2015 (Frontend)
-- 09/2011 ~ 07/2014 (Backend)
+- 09/2015 ~ 03/2018 (Full Stack Developer)
+- 10/2014 ~ 08/2015 (Frontend Developer)
+- 09/2011 ~ 07/2014 (Backend Developer)
 
 <script>
 function getAge() {
